@@ -13,5 +13,10 @@ namespace M0502.Controllers
         {
             return View();
         }
+
+        public ActionResult About()
+        {
+            return Content("(c) TI Capacitación 2014");
+        }
     }
 }
