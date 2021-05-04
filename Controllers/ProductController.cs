@@ -21,5 +21,27 @@ namespace M0502.Controllers
             var product = content.Products.FirstOrDefault(p => p.ProductID == id);
             return View(product);
         }
+
+        public ActionResult Create()
+        {
+            var product = new Product();
+            return View(product);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Product newProduct)
+        {
+            ActionResult result = View(newProduct);
+            if (ModelState.IsValid)
+            {
+                using (var context = new NorthwindEntities())
+                {
+                    context.Products.Add(newProduct);
+                    context.SaveChanges();
+                    result = RedirectToAction("Display", new { id = newProduct.ProductID });
+                }
+            }
+            return result;
+        }
     }
 }
