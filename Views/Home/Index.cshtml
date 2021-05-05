@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<M0502.Models.Comment>
 @{
     Layout = null;
 }
@@ -20,5 +20,8 @@
         <br />
         <img src="@Url.Action("GetImage", "Category", new { id =3 })" alt="Imagen de la categoria" />
     </div>
+    <h1>Comentarios</h1>
+    @*@Html.Partial("_CommentList", Model)*@
+    @Html.Action("_CommentList", "Comment")
 </body>
 </html>

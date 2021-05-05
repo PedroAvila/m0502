@@ -25,6 +25,8 @@
     <div>
         @Html.DisplayFor(m => m.UnitPrice)
     </div>
-
+    <br />
+    <h1>Comentarios</h1>
+    @Html.Action("_CommentListById", "Comment", new { id=Model.ProductID})
 </body>
 </html>

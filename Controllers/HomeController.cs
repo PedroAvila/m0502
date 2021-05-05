@@ -1,4 +1,5 @@
-﻿using System;
+﻿using M0502.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace M0502.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            var vm = new ViewModelComments();
+            var comments = vm.Comments.Take(5);
+            return View(comments);
         }
 
         public ActionResult About()
