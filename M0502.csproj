@@ -113,6 +113,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
@@ -121,6 +122,7 @@
     <Compile Include="Models\Category.cs">
       <DependentUpon>NorthwindDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\NorthwindDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -158,6 +160,7 @@
     <Content Include="Views\Product\Display.cshtml" />
     <Content Include="Views\Product\Create.cshtml" />
     <Content Include="Views\Category\UploadPhoto.cshtml" />
+    <Content Include="Views\Comment\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
