@@ -12,7 +12,9 @@ namespace M0502.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            return View();
+            var context = new NorthwindEntities();
+            var product = context.Products.ToList();
+            return View(product);
         }
 
         public ActionResult Display(int id)

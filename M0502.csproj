@@ -116,6 +116,7 @@
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="CustomHelpers\Helpers.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -161,6 +162,7 @@
     <Content Include="Views\Product\Create.cshtml" />
     <Content Include="Views\Category\UploadPhoto.cshtml" />
     <Content Include="Views\Comment\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
