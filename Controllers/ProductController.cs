@@ -25,6 +25,8 @@ namespace M0502.Controllers
         public ActionResult Create()
         {
             var product = new Product();
+            product.ProductName = "Azúcar";
+            product.Discontinued = true;
             return View(product);
         }
 
