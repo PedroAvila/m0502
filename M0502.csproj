@@ -143,6 +143,7 @@
       <DependentUpon>NorthwindDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ProductMetadata.cs" />
+    <Compile Include="Models\ViewModelComments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +164,7 @@
     <Content Include="Views\Category\UploadPhoto.cshtml" />
     <Content Include="Views\Comment\Index.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Shared\_CommentList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

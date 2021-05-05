@@ -19,5 +19,21 @@ namespace M0502.Controllers
             };
             return View(comment);
         }
+
+        [ChildActionOnly]
+        public ActionResult _CommentList()
+        {
+            var vm = new ViewModelComments();
+            var comments = vm.Comments.Take(5);
+            return View(comments);
+        }
+
+        [ChildActionOnly]
+        public ActionResult _CommentListById(int id)
+        {
+            var vm = new ViewModelComments();
+            var comments = vm.Comments.Where(c => c.ID == id);
+            return View("_CommentList", comments);
+        }
     }
 }
